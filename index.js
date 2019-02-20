@@ -1,6 +1,6 @@
 function maxNumbers(numbers) {
     let i = 0;
-    let maxNum = ''; 
+    let maxNum = 0; 
     while (i < numbers.length) {
         if (numbers[i] > maxNum) {
             maxNum = numbers[i];
@@ -28,5 +28,34 @@ function minNumbers(numbers) {
     return minNum;
 }
 
-const findMinNum = [2, 4, 6, 8, 10];
-console.log(minNumbers(findMinNum));
+// const findMinNum = [2, 4, 6, 8, 10];
+// console.log(minNumbers(findMinNum));
+
+function findAverage(numbers) {
+    let total = 0;
+    numbers.forEach(function(num) {
+        total += num;
+        // console.log(total);
+    });
+    return total / numbers.length;
+}
+
+// let test = [1,2,3,4,5];
+// console.log(findAverage(test));
+
+function repeat(fn, n) {
+    for(let i = 0; i < n; i++) {
+        fn();
+    }
+}
+
+function hello() {
+    console.log('Hello world');
+}
+
+function goodbye() {
+    console.log('Goodbye world');
+}
+
+repeat(hello,5);
+repeat(goodbye,5);
