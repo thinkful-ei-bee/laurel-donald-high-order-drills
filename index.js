@@ -14,11 +14,14 @@ function maxNumbers(numbers) {
 // console.log(maxNumbers(findMaxNum));
 
 function minNumbers(numbers) {
-    let i = 0;
-    let minNum = '';
-    while (i < numbers.length) {
+    let i = 1;
+    let minNum = numbers[0];
+    while (i < numbers.length) { 
+        // console.log(i);
         if (numbers[i] < minNum) {
             minNum = numbers[i];
+            // console.log(minNum);
+            // console.log(i);
         }
         i++;
     }
