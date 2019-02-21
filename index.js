@@ -142,6 +142,6 @@ let decode = testInput.reduce(function (acc, x) {
     } else {
         return acc + x[x.length-1];
     }
-});
+}, '');
 
 console.log(decode)
