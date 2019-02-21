@@ -128,6 +128,20 @@ let totalMovement = backAndRight.map(x => {
 });
 // console.log(totalMovement);
 
-let totalSteps = totalMovement.forEach(x => {
-    console.log(x);
-})
+// let totalSteps = totalMovement.forEach(x => {
+//     console.log(x);
+// })
+
+// reduce
+
+let testInput = 'noggin oreo the moon time tele steed his tent apollo her lives though shoo tofu budapest'.split(' ')
+
+let decode = testInput.reduce(function (acc, x) {
+    if(x.length === 3) {
+        return acc + ' ';
+    } else {
+        return acc + x[x.length-1];
+    }
+});
+
+console.log(decode)
